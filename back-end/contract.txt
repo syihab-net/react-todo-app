@@ -1,0 +1,51 @@
+BE functionality
+1. List todos
+  GET http://localhost:8080/todos
+  - response:
+    {
+      "todos": [
+        {
+          "id": 1,
+          "name": "eat breakfast",
+          "is_completed": true
+        },
+        {
+          "id": 2,
+          "name": "learn backend",
+          "is_completed": false
+        }
+      ]
+    }
+2. Create todo
+  POST http://localhost:8080/todos
+  - request:
+    {
+      "name": "learn frontend"
+    }
+  - response:
+    {
+      "ok": true
+    }
+3. Delete todo
+  DELETE http://localhost:8080/todos/:id
+  - response:
+    {
+      "ok": true
+    }
+4. Complete todo
+  POST http://localhost:8080/todos/:id/complete
+  - response:
+    {
+      "ok": true
+    }
+5. Update todo
+  PATCH http://localhost:8080/todos/:id
+  - request:
+    {
+      "name": "learn frontend"
+    }
+  - response:
+    {
+      "ok": true
+    }
+
